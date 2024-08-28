@@ -23,6 +23,8 @@ struct HabitColumn: View {
                     Text(habit.streakText)
                         .font(.caption)
                         .monospacedDigit()
+                        .contentTransition(.numericText(value: Double(habit.streakCount)))
+                        .animation(.bouncy(duration: 0.5), value: habit.streakCount)
                 }
                 
                 Spacer(minLength: 0)

@@ -12,6 +12,8 @@ struct HabitDetailView: View {
     
     let habit: Habit
     
+    @State private var streakTextFont: Font = .subheadline
+    
     var body: some View {
         VStack {
             Image(systemName: habit.symbolName)
@@ -29,14 +31,31 @@ struct HabitDetailView: View {
                 .bold()
             
             Text(habit.longStreakText)
-                .font(.headline)
+                .font(streakTextFont)
+                .foregroundStyle(.secondaryAccent)
             
             Spacer()
         }
         .padding()
+        .frame(maxWidth: .infinity)
+        .background {
+            MeshGradientView()
+                .overlay(Material.regular, in: .rect)
+                .ignoresSafeArea()
+        }
+        .onAppear {
+            withAnimation(.bouncy(duration: 0.6).delay(0.2)) {
+                streakTextFont = .headline
+            }
+        }
     }
 }
 
 #Preview {
-    HabitDetailView(habit: Habit.exampleHabits.first!)
+    VStack {
+    }.sheet(isPresented: .constant(true)) {
+        HabitDetailView(habit: Habit.exampleHabits.first!)
+            .presentationDetents([.fraction(0.35)])
+            .presentationDragIndicator(.visible)
+    }
 }
