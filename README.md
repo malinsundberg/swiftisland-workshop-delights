@@ -10,13 +10,15 @@ Starting project for "Add Delights to Your App"
 
 ## 4: Fun with Text
 
-## 5: Extras
-- Adding haptics
-- Playing more with gradient animations and adding animations based on state changes
-- Continue adding to sample project and "New Habit" screen
+## 5: Continued Work
+- Animate symbols and change button style in "New Habit" screen
+- Continue exploring MeshGradient and add a gradient background to the "Habits Overview" screen
+- Adding haptics to our HabitSymbolButton
+
+## 6: Extras
 - Explore how to add delights to your own app
 - Explore TextRenderer
 
-## Resources
+## Further Resources
 [What's new in SF Symbols 6](https://developer.apple.com/wwdc24/10188)
 [Creating custom visual effects with SwiftUI](https://developer.apple.com/wwdc24/10151)

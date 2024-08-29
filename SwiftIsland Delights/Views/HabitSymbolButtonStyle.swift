@@ -25,3 +25,15 @@ struct HabitSymbolButtonStyle: ButtonStyle {
 extension ButtonStyle where Self == HabitSymbolButtonStyle {
     static var habitSymbolButtonStyle: Self { Self() }
 }
+
+//extension View {
+//    @ViewBuilder
+//    func symbolEffect(isActive: Bool) -> some View {
+//        if #available(iOS 18.0, macOS 15.0, watchOS 11.0, *) {
+//            symbolEffect(.wiggle.counterClockwise, options: .nonRepeating.speed(1), value: isActive)
+//                .symbolEffect(.bounce, options: .nonRepeating.speed(1), value: isActive)
+//        } else {
+//            symbolEffect(.bounce, options: .nonRepeating.speed(1), value: isActive)
+//        }
+//    }
+//}
